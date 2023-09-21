@@ -24,9 +24,9 @@ app.get('/tico', (req, res) => {
 
 var pokemons = ['Pikachu', 'Butterfree', 'Pidgeot', 'Bulbasaur', 'Charizard', 'Squirtle', 'Kingler', 'Primeape', 'Muk', 'Tauros'];
 
-app.get('/pokemons/:id', (req, res) => {
+app.get('/pokemons', (req, res) => {
   let id = req.params.id;
-  return res.json([pokemons[id]])
+  return res.json([pokemons])
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
